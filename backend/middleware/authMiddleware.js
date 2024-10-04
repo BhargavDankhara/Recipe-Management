@@ -1,0 +1,18 @@
+// import jwt from "jsonwebtoken";
+// import { ENV_VARS } from "../config/envVars.js";
+
+// export default function authMiddleware(req, res, next) {
+//   const token = req.cookies.token;
+
+//   if (!token) {
+//     return res.status(401).json({ msg: "No token, authorization denied" });
+//   }
+
+//   try {
+//     const decoded = jwt.verify(token, ENV_VARS.JWT_SECRET);
+//     req.user = decoded.user;
+//     next();
+//   } catch (err) {
+//     res.status(401).json({ msg: "Token is not valid" });
+//   }
+// }
