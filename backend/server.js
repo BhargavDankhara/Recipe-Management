@@ -2,6 +2,7 @@ import express from "express";
 import cookieParser from "cookie-parser";
 
 import authRoutes from "./routes/auth.route.js";
+import recipeRoutes from "./routes/recipe.route.js";
 
 import { ENV_VARS } from "./config/envVars.js";
 import { connectDB } from "./config/db.js";
@@ -13,7 +14,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use("/api/auth", authRoutes);
-
+app.use("/api/recipes", recipeRoutes);
 app.listen(PORT, (err) => {
   if (err) {
     console.log(err, "server is not Connected");
